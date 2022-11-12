@@ -2,22 +2,20 @@ const {Router} = require ('express')
 const pool = require('../db')
 
 
-const select = async (res,req)=>{
+const select = async (req,res)=>{
     
-    const result = await pool.query('SELECT NOW()')
-    console.log (result)
-    res.json('executed')
+   res.send('lista de tareas');
 }
 
-const insert = async (res,req)=>{
+const insert = async (req,res)=>{
     res.send ('insertar datos');
 }
 
-const eliminar = async (res,req)=>{
+const deleted = async (req,res)=>{
     res.send ('borrar datos');
 }
 
-const update = async (res,req)=>{
+const update = async (req,res)=>{
     res.send ('actualizar datos');
 }
 
@@ -26,6 +24,6 @@ module.exports = {
 
     select,
     insert,
-    eliminar,
+    deleted,
     update
 }
