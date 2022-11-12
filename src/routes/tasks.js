@@ -2,9 +2,9 @@ const {Router} = require('express');
 const { eliminar,select,insert,update } = require('../controllers/crudController');
 
 const router = Router();
-const pool = require('../db')
 
-router.get('/tasks', select)
+
+router.get('/tarea', select)
 
 router.post('/tasks',insert)
 
