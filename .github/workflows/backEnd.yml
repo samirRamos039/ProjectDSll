@@ -3,9 +3,9 @@ name: CI ProyectoDII
 
 on:
   push:
-    branches: [ "backEnd" ]
+    branches: [ backEnd ]
   pull_request:
-    branches: [ "backEnd" ]
+    branches: [ backEnd ]
 
 jobs:
   build:
