@@ -1,9 +1,10 @@
 const { Router } = require('express')
 const pool = require('../db')
-
+//=============================================================
  const arreglo = ["carlos",80,true,{nombre:"samir", edad:25}]
  const [, , , pos4] = arreglo;
  console.log(pos4) 
+ //============================================================
 const select = async (req, res) => {
     try {
         const usuarios = await pool.query('SELECT * FROM usuario')
